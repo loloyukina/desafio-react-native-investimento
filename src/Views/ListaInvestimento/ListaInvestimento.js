@@ -20,7 +20,7 @@ const ListaInvestimento = ({navigation}) => {
 
 
   return (
-    <SafeAreaView>
+    <SafeAreaView  style={{flex: 1}}>
       <Cabecalho />
 
       <View style={estilo_padrao.linha}>
@@ -36,7 +36,7 @@ const ListaInvestimento = ({navigation}) => {
         renderItem={({ item }) => {
           const isCarencia = item.indicadorCarencia == "S";
           return (
-            <TouchableOpacity disabled={isCarencia} onPress={() => navigation.push('SimulacaoResgate')}>
+            <TouchableOpacity disabled={isCarencia} onPress={() => navigation.push('SimulacaoResgate', {investimento : item})}>
               <View style={[estilo_padrao.listagem, isCarencia ? estilo_padrao.bkgComCarencia : estilo_padrao.bkgSemCarencia]}>
                 <View style={estilo_padrao.linha}>
                   <Text style={[estilo_padrao.alinhamento_esquerda, isCarencia ? estilo_padrao.nome_valorComCarencia : estilo_padrao.nome_valor]}>
@@ -60,4 +60,11 @@ const ListaInvestimento = ({navigation}) => {
 
   )
 };
+
+ListaInvestimento.navigationOptions = ({ navigation }) => {
+  const opcoes = {
+    headerShown: false
+  }
+  return opcoes;
+}
 export default ListaInvestimento;

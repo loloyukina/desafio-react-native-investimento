@@ -47,10 +47,14 @@ const estilo_padrao = StyleSheet.create({
     bkgSemCarencia:{
         backgroundColor: "white",
     },
-
     bkgComCarencia:{
         backgroundColor: "#fcfcfc",
+    },
+    borda:{
+        borderBottomColor: "#f4f4f4",
+        borderBottomWidth: 2,
     }
+
 
 })
 
