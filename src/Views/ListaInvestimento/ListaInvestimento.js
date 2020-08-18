@@ -24,10 +24,12 @@ const ListaInvestimento = ({navigation}) => {
       <Cabecalho />
 
       <View style={estilo_padrao.linha}>
-        <Text style={[estilo_padrao.alinhamento_esquerda, estilo_padrao.fonte_titulo]}>
+        <Text headerShown={investimentos.length > 0} style={[estilo_padrao.alinhamento_esquerda, estilo_padrao.fonte_titulo]}>
           INVESTIMENTOS
         </Text>
-        <Text style={[estilo_padrao.alinhamento_direta, estilo_padrao.fonte_titulo]}>R$</Text>
+        <Text headerShown={investimentos.length > 0} style={[estilo_padrao.alinhamento_direta, estilo_padrao.fonte_titulo]}>
+          R$
+        </Text>
       </View>
 
       <FlatList

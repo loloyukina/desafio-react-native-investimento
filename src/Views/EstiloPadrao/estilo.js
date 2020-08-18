@@ -53,7 +53,32 @@ const estilo_padrao = StyleSheet.create({
     borda:{
         borderBottomColor: "#f4f4f4",
         borderBottomWidth: 2,
+    },
+    borda_extra:{
+        borderBottomColor: "#f4f4f4",
+        borderBottomWidth: 5,
+    },
+    paddingTop_padrao:{
+        paddingTop: 15
+    },
+    paddingBottom_padrao:{
+        paddingBottom: 15
+    },
+    paddingTop_maior:{
+        paddingTop: 20
+    },
+    button_resgaste:{
+        backgroundColor: "#fae128",
+        paddingTop:15,
+        paddingBottom:15
+    },
+    button_texto:{
+        backgroundColor: "#fae128",
+        color: "#005aa5",
+        fontWeight: "bold",
+        fontSize: 18,
     }
+
 
 
 })
